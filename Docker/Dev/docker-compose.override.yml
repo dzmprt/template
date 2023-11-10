@@ -1,0 +1,26 @@
+# version: '3.4'
+
+services:
+  um-backend:
+    ports:
+      - "8081:80"
+
+  cm-backend:
+    ports:
+      - "8082:80"
+
+  vs-backend:
+    ports:
+      - "8083:80"
+
+  vs-client:
+    ports:
+      - "3001:3000"
+
+  mssql:
+    ports:
+      - "1433:1433"
+
+  proxy:
+    ports:
+      - "80:80"

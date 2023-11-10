@@ -1,0 +1,32 @@
+# version: '3.4'
+
+services:
+  um-backend:
+    ports:
+      - "8081:80"
+      - "8082:443"
+
+  cm-backend:
+    ports:
+      - "8083:80"
+      - "8084:443"
+
+  vs-backend:
+    ports:
+      - "8085:80"
+      - "8086:443"
+
+  vs-client:
+    ports:
+      - "3001:3000"
+
+  mssql:
+    ports:
+      - "1433:1433"
+
+  proxy:
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - "80:80"
+      - "443:443"

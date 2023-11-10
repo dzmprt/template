@@ -1,0 +1,14 @@
+.input {
+  padding: 10px;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  border:none;
+  text-transform: 'uppercase';
+  color: #8157d6;
+  font-weight: bold;
+  width: 270px;
+  max-width: 80vw;
+}

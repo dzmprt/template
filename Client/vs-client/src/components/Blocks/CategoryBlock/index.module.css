@@ -1,0 +1,44 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+.category {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  background-color: ghostwhite;
+  padding: 15px;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rightArrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.downArrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+.openButton {
+  padding: 10px;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 100px;
+  background-color: white;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.done{
+  color: green;
+  font-size: 18px;
+}

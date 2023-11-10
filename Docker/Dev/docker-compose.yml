@@ -1,0 +1,63 @@
+version: '3.4'
+
+services:
+
+  um-backend:
+    image: um-server 
+    container_name: UmServerApp
+    build:
+      context: ../../Server/src
+      dockerfile: UM.Dockerfile
+    depends_on:
+      - mssql
+
+  cm-backend:
+    image: cm-server 
+    container_name: CmServerApp
+    build:
+      context: ../../Server/src
+      dockerfile: CM.Dockerfile
+    depends_on:
+      - mssql
+
+  vs-backend:
+    image: vs-server
+    container_name: VsServerApp
+    build:
+      context: ../../Server/src
+      dockerfile: VS.Dockerfile
+    depends_on:
+      - mssql
+
+  vs-client:
+    image: vs-client
+    container_name: VsClientApp
+    build: 
+     context: ../../Client/vs-client
+     dockerfile: Dockerfile
+    depends_on:
+      - vs-backend
+
+  mssql:
+    image: mcr.microsoft.com/azure-sql-edge:latest
+    container_name: MsSqlServer
+    cap_add: [ 'SYS_PTRACE' ]
+    environment:
+      - "ACCEPT_EULA=1"
+      - "MSSQL_SA_PASSWORD=fsdf#ferFGrs.234,"
+    hostname: mssql
+    volumes:
+      - ../../AppDatabase:/var/opt/mssql/data
+
+  proxy:
+    image: nginx:mainline
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - mssql
+      - um-backend
+      - cm-backend
+      - vs-backend
+      - vs-client
+
+

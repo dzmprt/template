@@ -1,0 +1,18 @@
+.resultButton {
+  background-color: rgb(7, 180, 71);
+  height: 66;
+  border: none;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  height: 66px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+}
+.resultButtonContainer {
+  max-width: 1000px;
+  margin: 0 auto;
+}

@@ -1,0 +1,26 @@
+.btn {
+  background-color: #ffcc00;
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+  font-size: 24px;
+  width: 290px;
+  max-width: calc(80vw + 20px);
+  font-weight: bold;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.btnDisable {
+  background-color: grey;
+  color: white;
+  cursor: not-allowed;
+}
+.card {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.error {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
